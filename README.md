@@ -1,6 +1,6 @@
 # ScalaRecursion
 
-Simple examples of recursion and how to convert them to tail recursion in Scala
+Simple examples of recursion and how to convert them to tail recursion in Scala.
 
 
 ### Sources:
