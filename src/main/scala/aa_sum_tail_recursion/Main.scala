@@ -1,3 +1,5 @@
+package aa_sum_tail_recursion
+
 import scala.annotation.tailrec
 
 object Main {
@@ -7,7 +9,7 @@ object Main {
     println(sumTailRecursive(listOfNumbers, 0))
   }
 
-/*
+  /*
 *** Thread output of sum() ***
 Main$.sum(Main.scala:12)
 Main$.sum(Main.scala:14)
@@ -24,7 +26,7 @@ Main.main(Main.scala)
     case head :: tail => head + sum(tail)
   }
 
-/*
+  /*
 *** Thread output of sumTailRecursive() ***
 Main$.sumTailRecursive(Main.scala:30)
 Main$.main(Main.scala:7)
