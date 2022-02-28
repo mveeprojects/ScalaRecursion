@@ -16,9 +16,13 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''#!/bin/bash
-                    echo "Running all tests ..."
+                    echo "Running all tests..."
                     ./sbt test
-                    echo "Tests complete"
+                    if [ $? -ne 0 ] ; then
+                      echo "One or more tests failed, marking this build as a failure."
+                      exit 1
+                    fi
+                    echo "Test run complete."
                 '''
             }
         }
