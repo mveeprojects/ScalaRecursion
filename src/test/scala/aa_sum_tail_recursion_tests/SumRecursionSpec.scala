@@ -12,6 +12,6 @@ class SumRecursionSpec extends AnyFlatSpec {
   }
 
   "sumTailRecursive" should "calculate the sum of a list correctly" in {
-    assert(sumTailRecursive(testList, 0) == 6)
+    assert(sumTailRecursive(testList, 0) == 7)
   }
 }
