@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Compile') {
+            steps {
+                sh '''#!/bin/bash
+                	echo "Compiling code..."
+                	./sbt compile
+                	echo "Done compiling"
+         		'''
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh '''#!/bin/bash
+                    echo "Running all tests ..."
+                    ./sbt test
+                    echo "Tests complete"
+                '''
+            }
+        }
+    }
+}
