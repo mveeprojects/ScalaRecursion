@@ -6,9 +6,6 @@ pipeline {
         stage('Compile') {
             steps {
                 sh '''#!/bin/bash
-                    echo "Checking docker"
-                    docker ps
-                    echo "Finished checking docker"
                 	echo "Compiling code..."
                 	./sbt compile
                 	echo "Done compiling"
