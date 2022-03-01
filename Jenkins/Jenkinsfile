@@ -6,6 +6,9 @@ pipeline {
         stage('Compile') {
             steps {
                 sh '''#!/bin/bash
+                    echo "Checking docker"
+                    docker ps
+                    echo "Finished checking docker"
                 	echo "Compiling code..."
                 	./sbt compile
                 	echo "Done compiling"
@@ -16,9 +19,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''#!/bin/bash
-                    echo "Checking docker"
-                    drpsa
-                    echo "Finished checking docker"
                     echo "Running all tests..."
                     ./sbt test
                     if [ $? -ne 0 ] ; then
